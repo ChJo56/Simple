@@ -25,18 +25,18 @@ import Combine
 //    print("The end result was \(receivedValue)")
 //}
 
-//let helloPublisher = "Hello world!".publisher
-//let fibPublisher = [0, 1, 2, 3, 4].publisher
-//_ = fibPublisher.sink(receiveCompletion: { (completion) in
-//    switch completion {
-//    case .finished:
-//        print("Finished!")
-//    case .failure(let never):
-//        print(never)
-//    }
-//}, receiveValue: { (value) in
-//    print(value)
-//})
+let helloPublisher = "Hello world!".publisher
+let fibPublisher = [0, 1, 2, 3, 4].publisher
+_ = fibPublisher.sink(receiveCompletion: { (completion) in
+   switch completion {
+   case .finished:
+       print("Finished!")
+   case .failure(let never):
+       print(never)
+   }
+}, receiveValue: { (value) in
+   print(value)
+})
 //
 //let subscriber = fibPublisher.sink { (value) in
 //    print(value)
